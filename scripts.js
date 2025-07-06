@@ -6,8 +6,6 @@ const contentError = document.getElementById("content-error")
 const postButton = document.getElementById("post-button")
 const rambleTemplate = document.getElementById("ramble-template")
 const rambleContainer = document.getElementById("ramble-container")
-const editButtons = document.querySelectorAll(".edit-button") // returns NodeList which we'll have to loop through to attach 'click' EventListener
-const nvmButtons = document.querySelectorAll(".nvm-button") // returns NodeList which we'll have to loop through to attach 'click' EventListener
 let rambleHistory = [] // array of objects (will hold each "ramble" from user); this was not working when i was using const
 
 // retrieves any object/data (as a string) saved in local storage as a result of user previously interacting with app
@@ -113,6 +111,14 @@ postButton.addEventListener('click', (event) => {
          */
         template_clone.querySelector(".template-title").textContent = title
         template_clone.querySelector(".template-content").textContent = content
+
+        // prepare to add logic to our "edit-button" button (aka our "delete post/ramble" button)
+        const editButton = template_clone.querySelector(".edit-button")
+
+        editButton.addEventListener("click", () => {
+            
+            //logic for edit-button
+        })
 
         // prepare to add logic to our "nvm" button (aka our "delete post/ramble" button)
         const nvmButton = template_clone.querySelector(".nvm-button")
