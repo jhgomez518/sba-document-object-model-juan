@@ -1,0 +1,16 @@
+
+.navbar-item.is-active {
+  background-color: var(--bulma-info) !important;
+  color: var(--bulma-info-invert, black) !important;
+}
+
+/* for new posts */
+.ramble-template {
+  margin-bottom: 1.5rem;
+  /* border-left: 4px solid #209cee;*/
+  padding-left: 1rem;
+}
+
+.button.is-blue.is-small {
+    width: 50px;
+}

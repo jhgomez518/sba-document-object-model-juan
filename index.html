@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-flex is-flex-direction-column">
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item is-size-4"> r a m b l e r</a>
+          <!-- creates a burger for mobile -->
+          <span class="navbar-burger" data-target="navbarMenuHeroC">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroC" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item"> feed </a>
+            <a class="navbar-item is-active"> profile </a>
+            <a class="navbar-item"> shop </a>
+            <a class="navbar-item"> settings </a>
+            <a class="navbar-item"> log out </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero is-fullheight is-flex-grow-1">
+      <!-- main hero body begins -->
+
+      <div class="hero-body is-flex is-flex-direction-column" id="hero-body">
+        <div class="column is-4" id="ramble-container">
+          <!-- ^this is the parent element to be appended with new posts -->
+          <!-- ramble-post form begins here/below -->
+          <div class="box" id="new-ramble">
+            <div class="field">
+              <div class="control">
+                <input
+                  class="input is-info"
+                  id="ramble-title"
+                  type="text"
+                  placeholder="new ramble title"
+                  maxlength="20"
+                  required
+                />
+                <span
+                  class="error-message has-text-danger"
+                  id="title-error"
+                ></span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <textarea
+                  class="textarea is-info"
+                  id="ramble-content"
+                  placeholder="ur rambling thoughts here..."
+                  maxlength="500"
+                  required
+                ></textarea>
+                <span
+                  class="error-message has-text-danger"
+                  id="content-error"
+                ></span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <button class="button is-info" id="post-button">ramble</button>
+              </div>
+            </div>
+          </div>
+          <!-- ramble-post form ends here -->
+          <!-- ramble-post template begins here/below (will be cloned for each new post); custom class "ramble-post" for mass-styling of new posts -->
+          <div class="box ramble-template is-hidden" id="ramble-template">
+            <div class="field">
+              <div class="control">
+                <h2 class="title template-title is-5">template title</h2>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <p class="template-content">template content</p>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control is-flex is-justify-content-flex-end">
+                <button class="button is-blue is-small edit-button">
+                  edit
+                </button>
+                <button class="button is-blue is-small ml-3 nvm-button">
+                  <!-- aka "delete" button -->
+                  nvm
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ramble-post template ends here -->
+        </div>
+        <!-- column div -->
+      </div>
+      <!-- hero-body div -->
+      <!-- main hero body ends -->
+    </section>
+    <footer class="footer">
+      <div class="columns has-text-centered">
+        <div class="column"><a>instagram</a></div>
+        <div class="column">&copy; 2025</div>
+        <div class="column"><a>contact us</a></div>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>

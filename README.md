@@ -1,0 +1,6 @@
+- need to develop a better intuition for when to use class and when to use id
+- realized i could remove the id attribute 
+- NEED to do:
+  - form validation + user input
+- source for timestamp: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+- source for querySelectorAll: https://www.w3schools.com/jsref/met_document_queryselectorall.asp
